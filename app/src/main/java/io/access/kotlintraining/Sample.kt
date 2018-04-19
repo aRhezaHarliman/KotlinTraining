@@ -65,6 +65,16 @@ fun whenFizzBuzz(i: Int): String {
     return i.toString()
 }
 
+fun isLeapYear(i: Int): Boolean {
+    if (i % 4 == 0) {
+        if (i % 100 == 0 && i % 400 != 0) {
+            return false
+        }
+        return true
+    }
+    return false
+}
+
 fun useClassOdd(i: Int): Boolean {
     var number = Number(i)
     return number.isOdd()

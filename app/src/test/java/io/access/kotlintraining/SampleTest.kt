@@ -71,6 +71,21 @@ class SampleTest {
     }
 
     @Test
+    fun testLeapYear() {
+        val nonLeapYear = 1900
+        var isLeap = isLeapYear(nonLeapYear)
+        assertEquals(false, isLeap, "Test leap year non leap [want] false [got] $isLeap")
+
+        val leapYear = 2012
+        isLeap = isLeapYear(leapYear)
+        assertEquals(true, isLeap, "Test leap year leap [want] true [got] $isLeap")
+
+        val leapYear2000 = 2000
+        isLeap = isLeapYear(leapYear2000)
+        assertEquals(true, isLeap, "Test leap year leap [want] true [got] $isLeap")
+    }
+
+    @Test
     fun testIsEven() {
         var even = 10
         var isEven = useClassEven(even)
