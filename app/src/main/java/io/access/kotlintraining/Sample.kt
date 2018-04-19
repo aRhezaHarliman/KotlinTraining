@@ -111,6 +111,14 @@ fun powerLambda(a: Int, n: Int): Long {
 * Exercise 2
 * */
 
+fun Int.isOdd(): Boolean {
+    return (this % 2 != 0)
+}
+
+fun Int.isEven(): Boolean {
+    return (this % 2 == 0)
+}
+
 fun useClassOdd(i: Int): Boolean {
     var number = Number(i)
     return number.isOdd()
@@ -119,6 +127,14 @@ fun useClassOdd(i: Int): Boolean {
 fun useClassEven(i: Int): Boolean {
     var number = Number(i)
     return number.isEven()
+}
+
+fun useExtensionOdd(i: Int): Boolean {
+    return i.isOdd()
+}
+
+fun useExtensionEven(i: Int): Boolean {
+    return i.isEven()
 }
 
 fun rollingDice(i: Int): MutableList<Int> {

@@ -109,6 +109,12 @@ class SampleTest {
         var notEven = 11
         isEven = useClassEven(notEven)
         assertEquals(false, isEven, "Even true [want] true [got] $isEven")
+
+        isEven = useExtensionEven(even)
+        assertEquals(true, isEven, "Even extension true [want] true [got] $isEven")
+
+        isEven = useExtensionEven(notEven)
+        assertEquals(false, isEven, "Even extension true [want] true [got] $isEven")
     }
 
     @Test
@@ -121,6 +127,11 @@ class SampleTest {
         isOdd = useClassOdd(notOdd)
         assertEquals(false, isOdd, "Odd true [want] true [got] $isOdd")
 
+        isOdd = useExtensionOdd(odd)
+        assertEquals(true, isOdd, "Odd extension true [want] true [got] $isOdd")
+
+        isOdd = useExtensionOdd(notOdd)
+        assertEquals(false, isOdd, "Odd extension true [want] true [got] $isOdd")
     }
 
     @Test
