@@ -129,7 +129,14 @@ class SampleTest {
         var list = rollingDice(rollNumber)
         for (item in list) {
             var actual = (rollNumber in 1..16)
-            assertEquals(true, actual, "Even true [want] true [got] $actual")
+            assertEquals(true, actual, "Test roll dice below 16 [want] true [got] $actual")
         }
+    }
+
+    @Test
+    fun testCustomSet() {
+        val n = 5
+        val result = customSet(n)
+        assertEquals(n, result, "Even true [want] $n [got] $result")
     }
 }
