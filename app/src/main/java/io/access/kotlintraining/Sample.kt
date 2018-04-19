@@ -1,5 +1,26 @@
 package io.access.kotlintraining
 
+
+class Number (n: Int){
+    var number: Int = n
+
+    fun isEven(): Boolean {
+        if (this.number % 2 == 0) {
+            return true
+        }
+        return false
+    }
+
+    fun isOdd(): Boolean {
+        if (this.number % 2 == 0) {
+            return false
+        }
+        return true
+    }
+
+
+}
+
 fun welcome() {
     println("welcome to ACCESS!")
 }
@@ -33,4 +54,14 @@ fun whenFizzBuzz(i: Int): String {
         i % 5 == 0 -> return "Buzz!"
     }
     return i.toString()
+}
+
+fun useClassOdd(i: Int): Boolean {
+    var number = Number(i)
+    return number.isOdd()
+}
+
+fun useClassEven(i: Int): Boolean {
+    var number = Number(i)
+    return number.isEven()
 }

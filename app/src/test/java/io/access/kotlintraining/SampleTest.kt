@@ -69,4 +69,27 @@ class SampleTest {
         val expectedOther = "11"
         assertEquals(expectedOther, other, "Other test [want] $expectedOther [got] $other")
     }
+
+    @Test
+    fun testIsEven() {
+        var even = 10
+        var isEven = useClassEven(even)
+        assertEquals(true, isEven, "Even true [want] true [got] $isEven")
+
+        var notEven = 11
+        isEven = useClassEven(notEven)
+        assertEquals(false, isEven, "Even true [want] true [got] $isEven")
+    }
+
+    @Test
+    fun testIsOdd() {
+        var odd = 7
+        var isOdd = useClassOdd(odd)
+        assertEquals(true, isOdd, "Even true [want] true [got] $isOdd")
+
+        var notOdd = 10
+        isOdd = useClassOdd(notOdd)
+        assertEquals(false, isOdd, "Even true [want] true [got] $isOdd")
+
+    }
 }
