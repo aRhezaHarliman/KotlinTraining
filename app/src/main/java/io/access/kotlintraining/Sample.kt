@@ -75,11 +75,15 @@ fun useClassEven(i: Int): Boolean {
     return number.isEven()
 }
 
-fun rollingDice(i: Int) {
+fun rollingDice(i: Int): MutableList<Int> {
     var dice = Dice(i)
+    var list: MutableList<Int> = mutableListOf()
     for (i in 1..100) {
-        println(dice.roll())
+        var result = dice.roll()
+        list.add(result)
+        println(result)
     }
+    return list
 }
 
 

@@ -96,6 +96,10 @@ class SampleTest {
     @Test
     fun testRollDice() {
         var rollNumber = 16
-        rollingDice(rollNumber)
+        var list = rollingDice(rollNumber)
+        for (item in list) {
+            var actual = (rollNumber in 1..16)
+            assertEquals(true, actual, "Even true [want] true [got] $actual")
+        }
     }
 }
