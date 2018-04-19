@@ -18,4 +18,23 @@ class SampleTest {
     fun testHello() {
         hello()
     }
+
+    @Test
+    fun testFizzBuzzLoop() {
+        fizzBuzzLoop()
+    }
+
+    @Test
+    fun testFizzBuzz() {
+        val fizzBuzz = fizzBuzz(90)
+        val expected = "FizzBuzz!"
+        assertEquals(expected, fizzBuzz, "[want] $expected [got] $fizzBuzz")
+    }
+
+    @Test
+    fun testWhenFizzBuzz() {
+        val fizzBuzz = whenFizzBuzz(90)
+        val expected = "FizzBuzz!"
+        assertEquals(expected, fizzBuzz, "[want] $expected [got] $fizzBuzz")
+    }
 }
