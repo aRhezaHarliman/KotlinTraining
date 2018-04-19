@@ -39,15 +39,15 @@ class MyCustomClass {
         }
 }
 
-class NabeAtsu {
-    var counter: Int = 0
+class NabeAtsu (default: Int = 0) {
+    private var counter: Int = default
 
     fun next(): String {
         counter += 1
         if (counter % 3 == 0) {
             return "aho"
         } else {
-            var text = counter.toString()
+            val text = counter.toString()
             if (text.contains('3')) return "aho"
         }
         return counter.toString()
@@ -135,12 +135,12 @@ fun Int.isEven(): Boolean {
 }
 
 fun useClassOdd(i: Int): Boolean {
-    var number = Number(i)
+    val number = Number(i)
     return number.isOdd()
 }
 
 fun useClassEven(i: Int): Boolean {
-    var number = Number(i)
+    val number = Number(i)
     return number.isEven()
 }
 
