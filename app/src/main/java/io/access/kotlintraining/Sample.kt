@@ -1,5 +1,6 @@
 package io.access.kotlintraining
 
+import java.util.Random
 
 class Number (n: Int){
     var number: Int = n
@@ -17,8 +18,16 @@ class Number (n: Int){
         }
         return true
     }
+}
 
+class Dice constructor(n: Int) {
+    var rollNumber: Int = n
 
+    fun roll(): Int {
+        val random = Random()
+        val n = random.nextInt(this.rollNumber)
+        return (n + 1)
+    }
 }
 
 fun welcome() {
@@ -65,3 +74,12 @@ fun useClassEven(i: Int): Boolean {
     var number = Number(i)
     return number.isEven()
 }
+
+fun rollingDice(i: Int) {
+    var dice = Dice(i)
+    for (i in 1..100) {
+        println(dice.roll())
+    }
+}
+
+

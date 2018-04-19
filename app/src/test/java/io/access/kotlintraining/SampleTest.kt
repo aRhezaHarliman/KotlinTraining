@@ -92,4 +92,10 @@ class SampleTest {
         assertEquals(false, isOdd, "Even true [want] true [got] $isOdd")
 
     }
+
+    @Test
+    fun testRollDice() {
+        var rollNumber = 16
+        rollingDice(rollNumber)
+    }
 }
