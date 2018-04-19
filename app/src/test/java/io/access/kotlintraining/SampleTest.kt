@@ -150,4 +150,9 @@ class SampleTest {
         val result = customSet(n)
         assertEquals(n, result, "Even true [want] $n [got] $result")
     }
+
+    @Test
+    fun testNabeAtsu() {
+        nabeatsuConverter(100)
+    }
 }

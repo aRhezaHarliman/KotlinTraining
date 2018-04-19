@@ -39,6 +39,21 @@ class MyCustomClass {
         }
 }
 
+class NabeAtsu {
+    var counter: Int = 0
+
+    fun next(): String {
+        counter += 1
+        if (counter % 3 == 0) {
+            return "aho"
+        } else {
+            var text = counter.toString()
+            if (text.contains('3')) return "aho"
+        }
+        return counter.toString()
+    }
+}
+
 fun welcome() {
     println("welcome to ACCESS!")
 }
@@ -161,6 +176,13 @@ fun customSet(number: Int): Int {
     println(p.counter) // 3
 
     return p.counter
+}
+
+fun nabeatsuConverter(i: Int) {
+    val nabeAtsu = NabeAtsu()
+    for (n in 1..i) {
+        println(nabeAtsu.next())
+    }
 }
 
 
