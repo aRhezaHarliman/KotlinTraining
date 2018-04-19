@@ -31,9 +31,21 @@ class Dice constructor(n: Int) {
     }
 }
 
+class MyCustomClass {
+    var counter: Int = 0
+    var propertyWithCounter = 0
+        set(value) {
+            this.counter ++
+        }
+}
+
 fun welcome() {
     println("welcome to ACCESS!")
 }
+
+/*
+* Exercise 1
+* */
 
 fun hello() {
     println("Hello World!")
@@ -84,6 +96,16 @@ fun power(a: Int, n: Int): Long {
     return Math.pow(a.toDouble(), n.toDouble()).toLong()
 }
 
+fun powerLambda(a: Int, n: Int): Long {
+    val result: (Long) -> Long = { i: Long ->
+        i * a
+    }
+    var temp = 1.toLong()
+    for (i in 1..n) {
+        temp = result(temp)
+    }
+    return temp
+}
 fun useClassOdd(i: Int): Boolean {
     var number = Number(i)
     return number.isOdd()

@@ -91,6 +91,10 @@ class SampleTest {
         var expected = 100
         assertEquals(expected.toLong(), result, "test Math OK [want] $expected [got] $result")
 
+        var resultLambda = powerLambda(3, 3)
+        var expectedLambda = 27
+        assertEquals(expectedLambda.toLong(), resultLambda, "test Math power Lambda OK [want] $expected [got] $result")
+
         result = power(-1, -2)
         expected = 0
         assertEquals(expected.toLong(), result, "test Math minus [want] $expected [got] $result")
@@ -111,11 +115,11 @@ class SampleTest {
     fun testIsOdd() {
         var odd = 7
         var isOdd = useClassOdd(odd)
-        assertEquals(true, isOdd, "Even true [want] true [got] $isOdd")
+        assertEquals(true, isOdd, "Odd true [want] true [got] $isOdd")
 
         var notOdd = 10
         isOdd = useClassOdd(notOdd)
-        assertEquals(false, isOdd, "Even true [want] true [got] $isOdd")
+        assertEquals(false, isOdd, "Odd true [want] true [got] $isOdd")
 
     }
 
