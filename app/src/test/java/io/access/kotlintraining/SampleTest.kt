@@ -86,6 +86,17 @@ class SampleTest {
     }
 
     @Test
+    fun testMathPower() {
+        var result = power(10, 2)
+        var expected = 100
+        assertEquals(expected.toLong(), result, "test Math OK [want] $expected [got] $result")
+
+        result = power(-1, -2)
+        expected = 0
+        assertEquals(expected.toLong(), result, "test Math minus [want] $expected [got] $result")
+    }
+
+    @Test
     fun testIsEven() {
         var even = 10
         var isEven = useClassEven(even)

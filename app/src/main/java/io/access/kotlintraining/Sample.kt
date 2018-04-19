@@ -1,6 +1,7 @@
 package io.access.kotlintraining
 
 import java.util.Random
+import java.lang.Math
 
 class Number (n: Int){
     var number: Int = n
@@ -73,6 +74,14 @@ fun isLeapYear(i: Int): Boolean {
         return true
     }
     return false
+}
+
+fun power(a: Int, n: Int): Long {
+    if (a < 0 || n < 0) {
+        println("inputs must be positive. return 0")
+        return 0
+    }
+    return Math.pow(a.toDouble(), n.toDouble()).toLong()
 }
 
 fun useClassOdd(i: Int): Boolean {
