@@ -42,9 +42,9 @@ class SampleTest {
         assertEquals(expectedBuzz, buzz, "Buzz test [want] $expectedBuzz [got] $buzz")
 
         // other
-        val other = fizzBuzz(0)
-        val expectedOther = "0"
-        assertEquals(expectedBuzz, buzz, "Other test [want] $expectedOther [got] $other")
+        val other = fizzBuzz(11)
+        val expectedOther = "11"
+        assertEquals(expectedOther, other, "Other test [want] $expectedOther [got] $other")
     }
 
     @Test
@@ -65,8 +65,8 @@ class SampleTest {
         assertEquals(expectedBuzz, buzz, "Buzz test [want] $expectedBuzz [got] $buzz")
 
         // other
-        val other = whenFizzBuzz(0)
-        val expectedOther = "0"
-        assertEquals(expectedBuzz, buzz, "Other test [want] $expectedOther [got] $other")
+        val other = whenFizzBuzz(11)
+        val expectedOther = "11"
+        assertEquals(expectedOther, other, "Other test [want] $expectedOther [got] $other")
     }
 }
