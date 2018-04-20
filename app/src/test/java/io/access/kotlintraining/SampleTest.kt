@@ -136,8 +136,9 @@ class SampleTest {
 
     @Test
     fun testRollDice() {
-        var rollNumber = 16
-        var list = rollingDice(rollNumber)
+        val rollNumber = 16
+        val count = 105
+        val list = rollingDice(rollNumber, count)
         for (item in list) {
             var actual = (rollNumber in 1..16)
             assertEquals(true, actual, "Test roll dice below 16 [want] true [got] $actual")

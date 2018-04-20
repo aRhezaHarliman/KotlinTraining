@@ -1,5 +1,6 @@
 package io.access.kotlintraining
 
+import java.lang.Exception
 import java.util.Random
 import java.lang.Math
 
@@ -22,7 +23,7 @@ class Number (n: Int){
 }
 
 class Dice constructor(n: Int) {
-    var rollNumber: Int = n
+    private val rollNumber: Int = n
 
     fun roll(): Int {
         val random = Random()
@@ -152,13 +153,23 @@ fun useExtensionEven(i: Int): Boolean {
     return i.isEven()
 }
 
-fun rollingDice(i: Int): MutableList<Int> {
-    var dice = Dice(i)
-    var list: MutableList<Int> = mutableListOf()
-    for (i in 1..100) {
-        var result = dice.roll()
+fun rollingDice(i: Int, count: Int): MutableList<Int> {
+    val dice = Dice(i)
+    val list: MutableList<Int> = mutableListOf()
+    var counter = 0
+    println("count=$count")
+    for (n in 1..count) {
+        if (counter == 100) {
+            Exception("I was broken")
+            println("I was broken")
+            val newList = rollingDice(i, (count - counter))
+            list.addAll(newList)
+            return list
+        }
+        val result = dice.roll()
         list.add(result)
         println(result)
+        counter ++
     }
     return list
 }
